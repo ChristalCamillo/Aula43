@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MinhaMusicafavorita</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nobody_letra">Venus, planet of love Was destroyed by global warming Did its people want too much, too? Did its people want too much? And I don\'t want your pity I just want somebody near me Guess I\'m a coward I just want to feel alright</string>
+    <string name="content_description">Cantora Mistki em Live Performance</string>
+    <string name="nobody">Nobody</string>
+    <string name="ver_detalhes">ver detalhes</string>
+    <string name="detalhe_name">Detalhes da banda</string>
+    <string name="mitski_infos">Mitski Miyawaki (Japão, 27 de setembro de 1990) é uma cantora, compositora e musicista nipo-americana.[1][2][3] Mitski lançou por conta seus dois primeiros álbuns, Lush (2012) e Retired from Sad, New Career in Business (2013), enquanto ainda estudava no Conservatório de Música da Purchase College. Depois de se formar, ela lançou seu terceiro álbum de estúdio, Bury Me at Makeout Creek (2014), pela gravadora Double Double Whammy. Este foi seguido por Puberty 2 (2016) e Be the Cowboy (2018), ambos lançados pela Dead Oceans. Retornou com Laurel Hell (2022) também lançando pela Dead Oceans.</string>
+    <string name="name">Mitski</string>
+</resources>
