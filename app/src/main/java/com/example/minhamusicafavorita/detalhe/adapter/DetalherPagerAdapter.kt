@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.minhamusicafavorita.detalhe.fotos.FotosFragment
+import com.example.minhamusicafavorita.detalhe.fotos.fragments.FotosFragment
 import com.example.minhamusicafavorita.detalhe.informacoes.InformacoesFragment
 
 class DetalherPagerAdapter (fragmentManager: FragmentManager,

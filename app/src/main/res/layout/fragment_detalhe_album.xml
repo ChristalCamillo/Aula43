@@ -1,14 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".detalhe.fotos.DetalheAlbumFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".detalhe.fotos.fragments.DetalheAlbumFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/imgAlbum"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvNomeAlbum"
+        android:layout_margin="@dimen/margem_12"/>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tvNomeAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/margem_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgAlbum"
+        app:layout_constraintBottom_toTopOf="@id/tvDescricao"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvDescricao"
+        android:layout_margin="@dimen/margem_12"
+        android:padding="@dimen/margem_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNomeAlbum"
+        app:layout_constraintBottom_toTopOf="@id/tvArtista"/>
+
+    <TextView
+        android:id="@+id/tvArtista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margem_12"
+        android:layout_marginLeft="@dimen/margem_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescricao"
+        app:layout_constraintBottom_toTopOf="@id/tvLancamento" />
+
+    <TextView
+        android:id="@+id/tvLancamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvArtista"
+        app:layout_constraintBottom_toTopOf="@id/tvGravadora"/>
+
+    <TextView
+        android:id="@+id/tvGravadora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLancamento"
+        app:layout_constraintBottom_toTopOf="@id/tvEstudio"/>
+
+    <TextView
+        android:id="@+id/tvEstudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGravadora"
+        app:layout_constraintBottom_toTopOf="@id/tvFormato"/>
+
+    <TextView
+        android:id="@+id/tvFormato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEstudio"
+        app:layout_constraintBottom_toTopOf="@id/tvGenero"/>
+
+    <TextView
+        android:id="@+id/tvGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFormato"
+        app:layout_constraintBottom_toTopOf="@id/imCoracao" />
+
+    <ImageView
+        android:id="@+id/imCoracao"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/coracao"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/margem_12"
+        app:layout_constraintTop_toBottomOf="@id/tvGenero"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
