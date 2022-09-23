@@ -3,6 +3,7 @@ package com.example.minhamusicafavorita.detalhe.detalheActivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.navigation.fragment.NavHostFragment
 import com.example.minhamusicafavorita.R
 import com.example.minhamusicafavorita.databinding.ActivityDetalheBinding
 import com.example.minhamusicafavorita.detalhe.adapter.DetalherPagerAdapter
