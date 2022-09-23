@@ -1,98 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".detalhe.fotos.fragments.DetalheAlbumFragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <ImageView
         android:id="@+id/imgAlbum"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="@dimen/dimen_16"
+        android:src="@drawable/laurel_hell"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tvNomeAlbum"
-        android:layout_margin="@dimen/margem_12"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvNomeAlbum"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Nome do album"
+        android:gravity="center"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_marginBottom="@dimen/margem_12"
+        android:layout_margin="@dimen/dimen_16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgAlbum"
-        app:layout_constraintBottom_toTopOf="@id/tvDescricao"/>
+        app:layout_constraintTop_toBottomOf="@id/imgAlbum" />
 
     <TextView
         android:id="@+id/tvDescricao"
-        android:layout_margin="@dimen/margem_12"
-        android:padding="@dimen/margem_12"
-        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Descrição"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvNomeAlbum"
-        app:layout_constraintBottom_toTopOf="@id/tvArtista"/>
+        app:layout_constraintTop_toBottomOf="@id/tvNomeAlbum" />
 
     <TextView
         android:id="@+id/tvArtista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margem_12"
-        android:layout_marginLeft="@dimen/margem_12"
+        android:text="Artista"
+        android:layout_margin="@dimen/dimen_16"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDescricao"
-        app:layout_constraintBottom_toTopOf="@id/tvLancamento" />
+        app:layout_constraintTop_toBottomOf="@id/tvDescricao" />
 
-    <TextView
-        android:id="@+id/tvLancamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margem_12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvArtista"
-        app:layout_constraintBottom_toTopOf="@id/tvGravadora"/>
+        <TextView
+            android:id="@+id/tvLancamento"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Lançamerto"
+            app:layout_constraintStart_toStartOf="@id/tvArtista"
+            app:layout_constraintTop_toBottomOf="@id/tvArtista" />
 
-    <TextView
+        <TextView
         android:id="@+id/tvGravadora"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margem_12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvLancamento"
-        app:layout_constraintBottom_toTopOf="@id/tvEstudio"/>
+        android:layout_height="0dp"
+            android:text="Gravadora"
+        app:layout_constraintStart_toStartOf="@id/tvLancamento"
+        app:layout_constraintTop_toBottomOf="@id/tvLancamento" />
 
     <TextView
         android:id="@+id/tvEstudio"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margem_12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvGravadora"
-        app:layout_constraintBottom_toTopOf="@id/tvFormato"/>
+        android:layout_height="0dp"
+        android:text="Estudio"
+        app:layout_constraintStart_toStartOf="@id/tvGravadora"
+        app:layout_constraintTop_toBottomOf="@id/tvGravadora" />
 
     <TextView
         android:id="@+id/tvFormato"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margem_12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvEstudio"
-        app:layout_constraintBottom_toTopOf="@id/tvGenero"/>
+        android:layout_height="0dp"
+        android:text="Formato"
+        app:layout_constraintStart_toStartOf="@id/tvEstudio"
+        app:layout_constraintTop_toBottomOf="@id/tvEstudio" />
 
     <TextView
         android:id="@+id/tvGenero"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margem_12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvFormato"
-        app:layout_constraintBottom_toTopOf="@id/imCoracao" />
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/tvFormato"
+        app:layout_constraintTop_toBottomOf="@id/tvFormato" />
 
     <ImageView
         android:id="@+id/imCoracao"
@@ -104,4 +102,6 @@
         android:layout_margin="@dimen/margem_12"
         app:layout_constraintTop_toBottomOf="@id/tvGenero"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
