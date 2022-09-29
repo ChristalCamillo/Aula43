@@ -18,7 +18,7 @@ class AlbumAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val mistkiAlbum = listaAlbuns[position]
-        holder.adicionarInformacoesView(mistkiAlbum)
+        holder.adicionarInformacoesView(mistkiAlbum as Album)
         holder.binding.cvItemLista.setOnClickListener {
             clickAlbum(mistkiAlbum)
         }
