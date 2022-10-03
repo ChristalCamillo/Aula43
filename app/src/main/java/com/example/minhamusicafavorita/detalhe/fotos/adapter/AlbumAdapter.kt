@@ -17,10 +17,10 @@ class AlbumAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val mistkiAlbum = listaAlbuns[position]
-        holder.adicionarInformacoesView(mistkiAlbum as Album)
+        val album = listaAlbuns[position]
+        holder.exibirDadosItensLista(album as Album)
         holder.binding.cvItemLista.setOnClickListener {
-            clickAlbum(mistkiAlbum)
+            clickAlbum(album)
         }
     }
 
@@ -36,7 +36,7 @@ class AlbumAdapter(
     }
 
     class ViewHolder(val binding: AlbumItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun adicionarInformacoesView(album: Album){
+        fun exibirDadosItensLista(album: Album){
             binding.ivAlbum.setImageResource(album.getImage())
         }
     }

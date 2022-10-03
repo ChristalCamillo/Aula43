@@ -28,13 +28,13 @@ class FotosFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstances: Bundle?) {
-        super.onViewCreated(view, savedInstances)
-        adicionarItensListaAlbuns()
-        exibirRecyclerView()
+    private fun exibirRecyclerView() {
+        binding.rvAlbuns.adapter = albumAdapter
+        binding.rvAlbuns.layoutManager = GridLayoutManager(context, 2)
+        criarListaAlbuns()
     }
 
-    private fun adicionarItensListaAlbuns() {
+    private fun criarListaAlbuns() {
         val listaAlbuns = mutableListOf<Album>()
 
         listaAlbuns.add(
@@ -119,9 +119,9 @@ class FotosFragment : Fragment() {
         albumAdapter.atualizarListaAlbum(listaAlbuns)
     }
 
-    private fun exibirRecyclerView() {
-        binding.rvAlbuns.adapter = albumAdapter
-        binding.rvAlbuns.layoutManager = GridLayoutManager(context, 2)
+    override fun onViewCreated(view: View, savedInstances: Bundle?) {
+        super.onViewCreated(view, savedInstances)
+        exibirRecyclerView()
     }
 
     private fun irParaDetalhesAlbumFragment(album: Album) {
